@@ -4,7 +4,7 @@
 local debug = require "debug"
 
 print"testing C-stack overflow detection"
-print"If this test craches, see its file ('cstack.lua')"
+print"If this test crashes, see its file ('cstack.lua')"
 
 -- Segmentation faults in these tests probably result from a C-stack
 -- overflow. To avoid these errors, you can use the function
@@ -120,7 +120,7 @@ do  print("testing changes in C-stack limit")
 
   assert(debug.setcstacklimit(400) == currentlimit)
   local lim400 = check()
-  -- a very low limit (given that the several calls to arive here)
+  -- a very low limit (given that the several calls to arrive here)
   local lowlimit = 38
   assert(debug.setcstacklimit(lowlimit) == 400)
   assert(check() < lowlimit - 30)

@@ -11,7 +11,7 @@
 
 
 /*
-** Implementation of tables (aka arrays, objects, or hash tables).
+** Implementation of tables (a.k.a. arrays, objects, or hash tables).
 ** Tables keep its elements in two parts: an array part and a hash part.
 ** Non-negative integer keys are all candidates to be kept in the array
 ** part. The actual size of the array is the largest 'n' such that
